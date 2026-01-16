@@ -1,8 +1,9 @@
+import TodoListItem from "./TodoListItem";
 function TodoList({todos}){
     return (
         <ul>
             {todos.map((todo, index) =>{
-                return <li key={index}>{todo}</li>
+                return <TodoListItem key={index} todo={todo} />
             })}
         </ul>
     )
