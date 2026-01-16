@@ -1,5 +1,7 @@
 
 import './App.css'
+import TodoList from './features/TodoList.jsx';
+import TodoForm from './features/TodoForm.js';
 
 function App() {
  const todos = [
@@ -10,11 +12,8 @@ function App() {
  return (
    <>
    <h1>My Todos</h1>
-   <ul>
-    {todos.map((todo, index) => (
-      <li key={index}>{todo}</li>
-    ))}
-   </ul>
+    <TodoForm/>
+    <TodoList todos={todos}/>
    </>
  )
    
